@@ -17,7 +17,8 @@ public class Main {
         Box rowBox = box; // warning : 원시 타입
 
         /**
-         * Box에서 꺼내오는 값은 모두 Object로 꺼내온다.
+         * Box 원시 타입은 기본적으로 모든 타입을 허용한다.
+         * Box에서 get으로 꺼내오는 값은 모두 Object로 꺼내온다.
          * 원시 타입은 타입 정보가 모두 지워진 상태니깐 말이다.
          * 자동으로 컴파일러 입장에서는 최상위인 Object를 사용할 수 밖에 없다.
          * Why?
@@ -25,7 +26,7 @@ public class Main {
          * Box -> 이제 사용 불가능합니다. 라고 해버리면 레거시 코드들은 모두 컴파일 불가능한 상태가 되어 버린다.
          * 여튼 원시 타입 Box는 Object를 던저 버리기 때문에 시대를 거스르는 행위니 사용하지 말자.
          */
-        Box rawBox = new Box(); //
+        Box rawBox = new Box<>(); // 모든 타입 허용
         Box<Integer> intBox = rawBox; // warning
 
         List items = Arrays.asList("string", "string");
