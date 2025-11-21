@@ -33,6 +33,10 @@ public class Main {
             return p1.getKey().equals(p2.getKey())
                 && p1.getValue().equals(p2.getValue());
         }
+
+        static <P> void print(P p) {
+            System.out.println(p);
+        }
     }
 
     static class Pair<K, V> {
