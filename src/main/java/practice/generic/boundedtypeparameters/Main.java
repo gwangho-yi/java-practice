@@ -13,7 +13,9 @@ public class Main {
         NaturalNumber<Number> naturalNumber = new NaturalNumber<>(10.1);
         boolean isEven = naturalNumber.isEven();
         System.out.println("isEven = " + isEven);
+
     }
+
 
     class A{}
     interface B{}
