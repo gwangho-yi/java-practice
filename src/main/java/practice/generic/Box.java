@@ -1,7 +1,7 @@
 package practice.generic;
 
 /**
- * <h3>제니릭 타입 (Generic Types) </h3>
+ * <h3>제네릭 타입 (Generic Types) </h3>
  * 타입이 매개변수화 된 클래스나 인터페이스.
  *
  * </br>
@@ -14,13 +14,18 @@ package practice.generic;
  * */
 public class Box<T> {
 
-    private T object;
+    private T t;
 
     public void set(T object) {
-        this.object = object;
+        this.t = object;
+    }
+
+    public <U extends Number> void inspect(U u) {
+        System.out.println("T: " + t.getClass().getName());
+        System.out.println("U: " + u.getClass().getName());
     }
 
     public T get() {
-        return object;
+        return t;
     }
 }
