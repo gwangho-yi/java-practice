@@ -19,8 +19,16 @@ public class Main {
     interface B{}
     interface C{}
 
-    class D <T extends A & B & C>{
+    class D <T extends A & B & C>{}
 
+    public static <T extends Comparable<T>> int countGreaterThan(T[] array, T elem) {
+        int count = 0;
+        for (T item : array) {
+            if (item.compareTo(elem) > 0) {
+                count++;
+            }
+        }
+        return count;
     }
 
 }
