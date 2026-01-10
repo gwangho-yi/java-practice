@@ -17,9 +17,22 @@ public class Main {
 
         method(childList);
 
-
     }
 
     static void method(List<? extends Parent> list) {}
 
+    void test() {
+        List<Integer> list = new ArrayList<>();
+        List<Number> list2 = new ArrayList<>();
+
+        list2.add(112.0);
+        list.add(220);
+
+        List<? extends Number> list3 = new ArrayList<>();
+        List<? super Integer> list4 = new ArrayList<>();
+
+        list4.add(11);
+
+
+    }
 }
